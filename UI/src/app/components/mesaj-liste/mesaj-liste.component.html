@@ -1,0 +1,14 @@
+<mat-grid-list cols="8">
+  <ng-container *ngFor="let mesaj of mesajlar">
+    <mat-grid-tile>
+      <mat-card>
+
+        <mat-card-content>
+          <h3> Kimden: <b>Admin</b></h3>
+          İçerik: {{mesaj.icerik}}
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>

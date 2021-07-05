@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <span>{{ dialogBaslik }}</span>
+</mat-toolbar>
+
+<form [formGroup]="frm">
+  <mat-form-field appearance="outline">
+    <mat-label>Mesaj</mat-label>
+    <input
+      [value]="mesaj"
+      matInput
+      placeholder="Mesaj"
+      formControlName="mesaj"
+      required
+    />
+  </mat-form-field>
+</form>
+<button
+  mat-raised-button
+  color="primary"
+  [disabled]="frm.invalid"
+  (click)="dialogRef.close(frm.value)"
+>
+  Gönder</button
+>&nbsp;
+<button mat-raised-button color="warn" (click)="dialogRef.close()">
+  İptal
+</button>
